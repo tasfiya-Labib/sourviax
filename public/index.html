@@ -1,0 +1,3008 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sourviax | Your Bridge to Trusted China Sourcing</title>
+
+    <meta name="description"
+          content="Sourviax helps international buyers source products from China with supplier verification, negotiation, quality inspection, OEM & ODM, and international logistics support.">
+
+    <meta name="keywords" content="China sourcing, product sourcing, supplier verification, China manufacturers, OEM, ODM, quality inspection, international logistics">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="canonical" href="https://sourviax.com/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sourviax.com/">
+    <meta property="og:title" content="Sourviax | Trusted China Sourcing">
+    <meta property="og:description" content="Connect with verified Chinese suppliers, manage quality checks, and ship products worldwide with Sourviax.">
+    <meta property="og:image" content="https://sourviax.com/images/only-logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .animate-fade-in-left {
+            animation: fadeInLeft 0.6s ease-out forwards;
+        }
+
+        .animate-fade-in-right {
+            animation: fadeInRight 0.6s ease-out forwards;
+        }
+
+        .animate-scale-in {
+            animation: scaleIn 0.6s ease-out forwards;
+        }
+
+        body {
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background: #0a0a0a;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button,
+        input,
+        textarea,
+        select {
+            font-family: inherit;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(15, 15, 15, 0.97);
+            border-bottom: 1px solid #333333;
+            backdrop-filter: blur(10px);
+            animation: slideDown 0.5s ease-out;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            padding: 16px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .logo-svg {
+            width: 116px;
+            height: 50px;
+            flex-shrink: 0;
+            display: block;
+            object-fit: contain;
+            background: transparent;
+            border: 0;
+            border-radius: 0;
+            padding: 0;
+            box-shadow: none;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-area:hover .logo-svg {
+            transform: scale(1.05);
+        }
+
+        .logo-area:hover .brand {
+            filter: drop-shadow(0 5px 8px rgba(0, 8, 32, 0.68)) drop-shadow(0 0 12px rgba(0, 126, 255, 0.42));
+            transform: translateY(-1px);
+        }
+
+        .logo-area .brand,
+        .logo-area .brand-tagline {
+            transition: color 0.3s ease, text-shadow 0.3s ease, filter 0.3s ease, transform 0.3s ease;
+        }
+
+        .brand {
+            font-family: "Arial Black", "Trebuchet MS", sans-serif;
+            font-size: 22px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            line-height: 1.05;
+            color: #ffffff;
+            text-transform: uppercase;
+            text-shadow: 0 0 18px rgba(0, 126, 255, 0.22);
+        }
+
+        .brand span {
+            color: #c1121f;
+        }
+
+        .brand-tagline {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 1.8px;
+            color: #7c8799;
+            margin-top: 5px;
+        }
+
+        .brand-tagline::before {
+            content: "";
+            width: 20px;
+            height: 2px;
+            flex-shrink: 0;
+            background: #f4b942;
+            box-shadow: 0 0 8px rgba(244, 185, 66, 0.35);
+        }
+
+        nav {
+            display: flex;
+            gap: 27px;
+            align-items: center;
+        }
+
+        nav a {
+            font-size: 14px;
+            font-weight: 600;
+            color: #cccccc;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #c1121f;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #c1121f;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .nav-button {
+            background: #c1121f;
+            color: white !important;
+            padding: 11px 18px;
+            border-radius: 8px;
+        }
+
+        .nav-button.whatsapp {
+            background: #25d366;
+            color: #07150f !important;
+        }
+
+        .nav-button.whatsapp:hover {
+            background: #1fae58;
+        }
+
+        .nav-button:hover {
+            background: #8b0a17;
+        }
+
+        .menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 26px;
+            cursor: pointer;
+        }
+
+        .hero {
+            min-height: 650px;
+            background:
+                radial-gradient(circle at 85% 20%, rgba(193, 18, 31, 0.15), transparent 35%),
+                linear-gradient(135deg, #1a1a1a, #0a0a0a);
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+            padding: 90px 25px;
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #fde5e8;
+            color: #c1121f;
+            padding: 8px 14px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 5vw, 68px);
+            line-height: 1.05;
+            letter-spacing: -2px;
+            color: #ffffff;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            color: #c1121f;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #cccccc;
+            max-width: 650px;
+            margin-bottom: 30px;
+        }
+
+        .hero-proof {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 18px;
+            margin-top: 22px;
+            color: #b8c0cc;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .hero-proof span::before {
+            content: "✓";
+            color: #c1121f;
+            margin-right: 6px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 23px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .btn-primary {
+            background: #c1121f;
+            color: white;
+            box-shadow: 0 10px 25px rgba(193, 18, 31, 0.35);
+        }
+
+        .btn-primary:hover {
+            background: #8b0a17;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(193, 18, 31, 0.45);
+        }
+
+        .btn-primary:active {
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: #222222;
+            color: #ffffff;
+            border: 2px solid #444444;
+            transition: all 0.3s ease;
+        }
+
+        .btn-whatsapp {
+            background: #25d366;
+            color: #07150f;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            background: #1fae58;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-secondary:hover {
+            border-color: #c1121f;
+            color: #ffffff;
+            background: #1a1a1a;
+            transform: translateY(-2px);
+        }
+
+        .hero-card {
+            background: #1a1a1a;
+            border: 1px solid #333333;
+            border-radius: 22px;
+            padding: 30px;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-card-title {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 22px;
+        }
+
+        .sourcing-step {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .step-icon {
+            width: 40px;
+            height: 40px;
+            flex-shrink: 0;
+            background: #fde5e8;
+            color: #c1121f;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+        }
+
+        .sourcing-step h4 {
+            margin-bottom: 3px;
+        }
+
+        .sourcing-step p {
+            margin: 0;
+            font-size: 13px;
+            color: #999999;
+        }
+
+        .trust-bar {
+            background: #1a1a1a;
+            color: white;
+        }
+
+        .trust-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 22px 25px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            text-align: center;
+        }
+
+        .trust-item {
+            border-right: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .trust-item:last-child {
+            border-right: none;
+        }
+
+        .trust-number {
+            font-size: 25px;
+            font-weight: 800;
+        }
+
+        .trust-label {
+            font-size: 12px;
+            color: #aeb9ca;
+        }
+
+        section {
+            padding: 90px 25px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-heading {
+            max-width: 720px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
+        .section-heading .eyebrow {
+            color: #c1121f;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .section-heading h2 {
+            font-size: 40px;
+            line-height: 1.15;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .section-heading p {
+            color: #e0e0e0;
+            font-size: 16px;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .why-card {
+            padding: 30px;
+            border: 1px solid #333333;
+            border-radius: 15px;
+            background: #1a1a1a;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            cursor: pointer;
+        }
+
+        .why-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 60px rgba(193, 18, 31, 0.25);
+            border-color: #c1121f;
+        }
+
+        .why-card:hover .icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .icon {
+            width: 48px;
+            height: 48px;
+            background: #fde5e8;
+            color: #c1121f;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .why-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .why-card p {
+            color: #999999;
+            font-size: 14px;
+        }
+
+        .services {
+            background: #0a0a0a;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service-card {
+            background: #1a1a1a;
+            padding: 28px;
+            border-radius: 15px;
+            border: 1px solid #333333;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(193, 18, 31, 0.25);
+            border-color: #c1121f;
+        }
+
+        .service-card:hover .service-number {
+            transform: scale(1.2);
+        }
+
+        .service-number {
+            color: #c1121f;
+            font-size: 13px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #999999;
+            font-size: 14px;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .category {
+            min-height: 270px;
+            padding: 0;
+            border-radius: 15px;
+            background: #1a1a1a;
+            border: 1px solid #333333;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .category:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(193, 18, 31, 0.12);
+            border-color: #c1121f;
+        }
+
+        .category-image {
+            width: 100%;
+            height: 165px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .category:hover .category-image {
+            transform: scale(1.06);
+        }
+
+        .category-content {
+            padding: 18px 20px 20px;
+            background: #1a1a1a;
+        }
+
+        .category h3 {
+            margin-bottom: 4px;
+        }
+
+        .category p {
+            color: #aeb5c0;
+            font-size: 13px;
+        }
+
+        .process {
+            background: #1a1a1a;
+            color: white;
+        }
+
+        .process .section-heading h2 {
+            color: #ffffff;
+        }
+
+        .process .section-heading p {
+            color: #999999;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .process-card {
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        .process-circle {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 18px;
+            border-radius: 50%;
+            background: #c1121f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 18px;
+        }
+
+        .process-card p {
+            color: #999999;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .support-content h2 {
+            font-size: 40px;
+            line-height: 1.15;
+            margin-bottom: 18px;
+            color: #ffffff;
+        }
+
+        .support-content > p {
+            color: #999999;
+            margin-bottom: 25px;
+        }
+
+        .check-list {
+            list-style: none;
+        }
+
+        .check-list li {
+            margin-bottom: 13px;
+            font-size: 15px;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            color: #c1121f;
+            font-weight: 900;
+            margin-right: 10px;
+        }
+
+        .support-card {
+            padding: 35px;
+            border-radius: 20px;
+            background: #f5f5f5;
+            border: 1px solid #e0e0e0;
+        }
+
+        .support-card h3 {
+            margin-bottom: 15px;
+        }
+
+        .support-card p {
+            color: #6f7a8c;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .cta {
+            background: #0a0a0a;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .cta p {
+            color: #999999;
+            margin-bottom: 25px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .contact-info > p {
+            color: #999999;
+            margin-bottom: 25px;
+        }
+
+        .contact-detail {
+            margin-bottom: 18px;
+            padding-left: 14px;
+            border-left: 2px solid rgba(244, 185, 66, 0.58);
+        }
+
+        .contact-detail strong {
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .contact-detail span {
+            color: #999999;
+        }
+
+        .contact-detail a {
+            color: #d6a84f;
+            font-weight: 700;
+        }
+
+        .contact-detail a:hover {
+            color: #f2cf7a;
+        }
+
+        .location-map {
+            width: 100%;
+            height: 260px;
+            margin-top: 24px;
+            border: 1px solid rgba(244, 185, 66, 0.62);
+            border-radius: 14px;
+            overflow: hidden;
+            background: #041326;
+            box-shadow: 0 18px 40px rgba(0, 4, 15, 0.32), 0 0 0 4px rgba(244, 185, 66, 0.06);
+        }
+
+        .location-map iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .contact-form {
+            padding: 30px;
+            border: 1px solid #333333;
+            border-radius: 16px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
+            background: #1a1a1a;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        /* Customer Satisfaction Section */
+        .satisfaction-section {
+            background: linear-gradient(135deg, #1a1a1a, #0a0a0a);
+            padding: 90px 25px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 40px 25px;
+            border-radius: 16px;
+            background: #222222;
+            border: 1px solid #333333;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            border-color: #c1121f;
+            box-shadow: 0 25px 60px rgba(193, 18, 31, 0.25);
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 900;
+            color: #c1121f;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: #cccccc;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .testimonial-card {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #333333;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            border-color: #c1121f;
+            box-shadow: 0 20px 50px rgba(193, 18, 31, 0.25);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #c1121f;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 20px;
+        }
+
+        .testimonial-info h4 {
+            margin: 0;
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        .testimonial-info p {
+            margin: 0;
+            color: #999999;
+            font-size: 13px;
+        }
+
+        .stars {
+            color: #c1121f;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .testimonial-text {
+            color: #cccccc;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 900px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #process .process-grid::before {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-number {
+                font-size: 36px;
+            }
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            border: 1px solid #333333;
+            border-radius: 8px;
+            padding: 12px 13px;
+            outline: none;
+            font-size: 14px;
+            background: #222222;
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #c1121f;
+            box-shadow: 0 0 0 3px rgba(193, 18, 31, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-note {
+            color: #8993a3;
+            font-size: 12px;
+            margin-top: 12px;
+        }
+
+        @keyframes qrPulse {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(193, 18, 31, 0.45);
+            }
+            50% {
+                box-shadow: 0 0 0 8px rgba(193, 18, 31, 0);
+            }
+        }
+
+        .qr-card {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 24px;
+            padding: 14px;
+            background: #ffffff;
+            border-radius: 12px;
+            color: #111111;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+        }
+
+        .qr-card img {
+            width: 170px;
+            height: auto;
+            display: block;
+        }
+
+        .qr-code-wrap {
+            position: relative;
+            width: 170px;
+        }
+
+        .qr-code-wrap .qr-brand-mark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 46px;
+            height: 46px;
+            transform: translate(-50%, -50%);
+            display: block;
+            object-fit: contain;
+            background: #ffffff;
+            border-radius: 50%;
+            padding: 4px;
+        }
+
+        .qr-card span {
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.4px;
+        }
+
+        .qr-contact-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 40px;
+            padding: 9px 15px;
+            border: 1px solid #f4b942;
+            border-radius: 6px;
+            background: #062b66;
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .qr-contact-link:hover {
+            background: #f4b942;
+            color: #041326;
+        }
+
+        /* Premium contact moments */
+        .qr-card {
+            position: relative;
+            gap: 16px;
+            padding: 22px;
+            background:
+                radial-gradient(circle at 50% 0%, rgba(0, 126, 255, 0.2), transparent 48%),
+                linear-gradient(145deg, #0a3475, #020c22 72%);
+            border: 1px solid #f4b942;
+            border-radius: 18px;
+            box-shadow:
+                0 22px 48px rgba(0, 3, 15, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.15),
+                0 0 0 4px rgba(244, 185, 66, 0.08);
+        }
+
+        .qr-card::before {
+            content: "DIRECT CONNECTION";
+            color: #f4b942;
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: 1.8px;
+        }
+
+        .qr-card::after {
+            content: "";
+            position: absolute;
+            inset: 7px;
+            border: 1px solid rgba(244, 185, 66, 0.18);
+            border-radius: 13px;
+            pointer-events: none;
+        }
+
+        .qr-code-wrap {
+            width: 210px;
+            padding: 13px;
+            border: 1px solid rgba(244, 185, 66, 0.86);
+            border-radius: 14px;
+            background: #ffffff;
+            box-shadow:
+                0 10px 28px rgba(0, 0, 0, 0.35),
+                0 0 0 5px rgba(255, 255, 255, 0.06);
+        }
+
+        .qr-card img:first-child {
+            width: 184px;
+            height: 184px;
+            object-fit: contain;
+        }
+
+        .qr-code-wrap .qr-brand-mark {
+            width: 36px;
+            height: 36px;
+            padding: 4px;
+            border: 2px solid #f4b942;
+            border-radius: 8px;
+            background: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .qr-card > span {
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.35px;
+        }
+
+        .support-card {
+            position: relative;
+            padding: 38px;
+            background: linear-gradient(145deg, #0a3475, #020c22);
+            border: 1px solid rgba(244, 185, 66, 0.72);
+            border-radius: 16px;
+            box-shadow: 0 24px 58px rgba(0, 3, 15, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+        }
+
+        .support-card::before {
+            content: "SOURVIAX SUPPORT";
+            display: block;
+            margin-bottom: 14px;
+            color: #f4b942;
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: 1.8px;
+        }
+
+        .support-card h3 {
+            color: #ffffff;
+            font-size: 29px;
+            line-height: 1.18;
+            margin-bottom: 16px;
+        }
+
+        .support-card p {
+            color: #d5e1f0;
+            font-size: 16px;
+            line-height: 1.75;
+            max-width: 490px;
+            margin-bottom: 26px;
+        }
+
+        .support-card .btn {
+            min-height: 50px;
+            padding-left: 25px;
+            padding-right: 25px;
+            font-size: 16px;
+            width: 100%;
+            border: 2px solid #f4b942;
+            background: #062b66;
+            color: #ffffff;
+        }
+
+        .support-card .btn:hover {
+            background: #f4b942;
+            border-color: #ffffff;
+            color: #041326;
+        }
+
+        .support-section {
+            background:
+                radial-gradient(circle at 15% 50%, rgba(0, 126, 255, 0.2), transparent 30%),
+                linear-gradient(135deg, #041d49, #020817 72%);
+            border-top: 1px solid rgba(244, 185, 66, 0.2);
+            border-bottom: 1px solid rgba(244, 185, 66, 0.2);
+        }
+
+        .support-section .support-content h2 {
+            color: #ffffff;
+        }
+
+        .support-section .support-content > p,
+        .support-section .check-list li {
+            color: #d5e1f0;
+        }
+
+        .support-content > p {
+            color: #d5e1f0;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        footer {
+            background:
+                radial-gradient(circle at 12% 0%, rgba(0, 126, 255, 0.16), transparent 28%),
+                linear-gradient(145deg, #061a3d, #010611 78%);
+            color: white;
+            padding: 50px 25px 25px;
+            border-top: 1px solid rgba(244, 185, 66, 0.42);
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-brand {
+            font-family: "Arial Black", "Trebuchet MS", sans-serif;
+            font-size: 23px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .footer-brand span {
+            color: #ff6b7a;
+        }
+
+        .footer-column h4 {
+            margin-bottom: 15px;
+            color: #f4b942;
+            letter-spacing: 0.4px;
+        }
+
+        .footer-column a {
+            display: block;
+            color: #999999;
+            font-size: 13px;
+            margin-bottom: 9px;
+            transition: color 0.25s ease, transform 0.25s ease;
+        }
+
+        .footer-column a:hover {
+            color: #f4b942;
+            transform: translateX(4px);
+        }
+
+        .footer-description {
+            color: #b9cbe1;
+            max-width: 350px;
+            font-size: 13px;
+        }
+
+        .copyright {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(244, 185, 66, 0.24);
+            color: #7f98bb;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            background: #25d366;
+            color: #07150f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 18px 40px rgba(37, 211, 102, 0.4);
+            font-size: 30px;
+            z-index: 2000;
+        }
+
+        .modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(7, 17, 32, 0.65);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            z-index: 2000;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            width: 100%;
+            max-width: 650px;
+            max-height: 90vh;
+            overflow-y: auto;
+            background: #1a1a1a;
+            border-radius: 18px;
+            padding: 30px;
+            position: relative;
+            border: 1px solid #333333;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            border: none;
+            background: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: #667286;
+        }
+
+        .modal-content h2 {
+            margin-bottom: 7px;
+            color: #ffffff;
+        }
+
+        .modal-content > p {
+            color: #999999;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 900px) {
+            nav {
+                display: none;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 78px;
+                background: #151515;
+                padding: 20px;
+                flex-direction: column;
+                border-bottom: 1px solid #333333;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+            }
+
+            .why-grid,
+            .service-grid,
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .support-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                padding: 12px 18px;
+            }
+
+            .logo-svg {
+                width: 92px;
+                height: 42px;
+                border-radius: 8px;
+                padding: 2px 4px;
+            }
+
+            .hero {
+                min-height: auto;
+            }
+
+            .hero-container {
+                padding: 65px 20px;
+            }
+
+            .hero h1 {
+                font-size: 43px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 65px 20px;
+            }
+
+            .section-heading h2,
+            .support-content h2,
+            .contact-info h2,
+            .cta h2 {
+                font-size: 31px;
+            }
+
+            .trust-container {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .trust-item {
+                border-right: none;
+            }
+
+            .why-grid,
+            .service-grid,
+            .category-grid,
+            .process-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                gap: 25px;
+            }
+        }
+
+        /* Sourviax brand palette */
+        .brand span,
+        .footer-brand span,
+        nav a:hover,
+        .hero h1 span,
+        .hero-proof span::before,
+        .section-heading .eyebrow,
+        .service-number,
+        .check-list li::before,
+        .stars,
+        .footer-column a:hover {
+            color: #d6a84f;
+        }
+
+        nav a:not(.nav-button):hover {
+            color: #f4b942;
+        }
+
+        nav a:not(.nav-button)::after {
+            background: #f4b942;
+        }
+
+        nav a::after,
+        .nav-button,
+        .btn-primary,
+        .step-icon,
+        .icon,
+        .process-circle,
+        .testimonial-avatar {
+            background: #0b2a5b;
+        }
+
+        .step-icon,
+        .icon {
+            color: #d6a84f;
+        }
+
+        .badge {
+            background: #f8efd9;
+            color: #0b2a5b;
+        }
+
+        .btn-primary:hover {
+            background: #071d40;
+        }
+
+        .btn-primary,
+        .why-card:hover,
+        .service-card:hover,
+        .category:hover,
+        .btn-secondary:hover,
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #d6a84f;
+        }
+
+        .why-card:hover,
+        .service-card:hover,
+        .testimonial-card:hover {
+            box-shadow: 0 20px 50px rgba(11, 42, 91, 0.35);
+        }
+
+        .hero {
+            background:
+                radial-gradient(circle at 85% 20%, rgba(214, 168, 79, 0.16), transparent 35%),
+                linear-gradient(135deg, #142f5b, #0a0a0a);
+        }
+
+        body {
+            color: #f4f7fb;
+            background-color: #050d1c;
+            background-image:
+                radial-gradient(circle at 12% 8%, rgba(29, 91, 156, 0.2), transparent 28%),
+                radial-gradient(circle at 88% 45%, rgba(214, 168, 79, 0.08), transparent 24%),
+                linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+            background-size: auto, auto, 44px 44px, 44px 44px;
+        }
+
+        header {
+            background: rgba(4, 13, 29, 0.94);
+            border-bottom-color: rgba(214, 168, 79, 0.28);
+        }
+
+        .hero {
+            min-height: 680px;
+            background:
+                radial-gradient(circle at 78% 18%, rgba(214, 168, 79, 0.18), transparent 24%),
+                radial-gradient(circle at 12% 70%, rgba(20, 83, 150, 0.22), transparent 32%),
+                linear-gradient(135deg, #102e5a 0%, #07162e 48%, #030914 100%);
+        }
+
+        .hero-card,
+        .why-card,
+        .service-card,
+        .category,
+        .testimonial-card,
+        .contact-form,
+        .stat-card {
+            background: linear-gradient(145deg, rgba(17, 43, 79, 0.9), rgba(7, 19, 39, 0.94));
+            border-color: rgba(154, 183, 218, 0.2);
+            box-shadow: 0 22px 55px rgba(0, 0, 0, 0.28);
+        }
+
+        .hero-card {
+            border-top-color: rgba(214, 168, 79, 0.65);
+        }
+
+        .trust-bar,
+        .process {
+            background: linear-gradient(115deg, #0a2144, #061326);
+        }
+
+        .services,
+        .cta {
+            background: rgba(3, 10, 23, 0.72);
+        }
+
+        .satisfaction-section {
+            background:
+                radial-gradient(circle at 75% 15%, rgba(214, 168, 79, 0.08), transparent 25%),
+                linear-gradient(145deg, #0b2346, #040b18 75%);
+        }
+
+        .support-card {
+            background: linear-gradient(145deg, #0a3475, #020c22);
+            border: 2px solid #d6a84f;
+            box-shadow: 0 22px 55px rgba(0, 0, 0, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+        }
+
+        .category-content {
+            background: #0b2346;
+        }
+
+        #products {
+            position: relative;
+            background:
+                radial-gradient(circle at 12% 10%, rgba(0, 126, 255, 0.16), transparent 28%),
+                radial-gradient(circle at 88% 85%, rgba(244, 185, 66, 0.08), transparent 26%),
+                linear-gradient(145deg, #061a3d, #020817 76%);
+            border-top: 1px solid rgba(244, 185, 66, 0.18);
+            border-bottom: 1px solid rgba(244, 185, 66, 0.18);
+        }
+
+        #products .section-heading {
+            position: relative;
+        }
+
+        #products .section-heading h2 {
+            letter-spacing: -1px;
+        }
+
+        #products .category {
+            position: relative;
+            min-height: 300px;
+            border: 1px solid rgba(244, 185, 66, 0.28);
+            border-radius: 18px;
+            background: #041326;
+            box-shadow: 0 16px 36px rgba(0, 4, 15, 0.28);
+        }
+
+        #products .category::after {
+            content: "";
+            position: absolute;
+            inset: 9px;
+            border: 1px solid rgba(244, 185, 66, 0.14);
+            border-radius: 11px;
+            pointer-events: none;
+        }
+
+        #products .category-image {
+            width: 100%;
+            height: 182px;
+            aspect-ratio: 16 / 10;
+            filter: saturate(0.9) contrast(1.05);
+            object-fit: cover;
+            object-position: center center;
+            background: #071d40;
+            transition: transform 0.55s ease, filter 0.55s ease;
+        }
+
+        #products .category-content {
+            position: relative;
+            z-index: 1;
+            min-height: 105px;
+            padding: 20px 22px 22px;
+            background: linear-gradient(145deg, #0a3475, #041326);
+            border-top: 1px solid rgba(244, 185, 66, 0.55);
+        }
+
+        #products .category h3 {
+            color: #ffffff;
+            font-size: 19px;
+            letter-spacing: 0.1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #products .category h3::after {
+            content: "";
+            width: 24px;
+            height: 2px;
+            background: #f4b942;
+            opacity: 0.85;
+        }
+
+        #products .category p {
+            color: #b9cbe1;
+            line-height: 1.55;
+        }
+
+        #products .category:hover {
+            transform: translateY(-9px);
+            border-color: #f4b942;
+            box-shadow: 0 24px 52px rgba(0, 5, 20, 0.48), 0 0 24px rgba(0, 126, 255, 0.12);
+        }
+
+        #products .category:hover .category-image {
+            filter: saturate(1.08) contrast(1.08);
+        }
+
+        #products .category:focus-within {
+            outline: 2px solid #f4b942;
+            outline-offset: 3px;
+        }
+
+        @media (max-width: 600px) {
+            #products .category {
+                min-height: 270px;
+            }
+
+            #products .category-image {
+                height: 155px;
+            }
+
+            #products .category-content {
+                min-height: 115px;
+                padding: 17px 18px 19px;
+            }
+        }
+
+        #process {
+            position: relative;
+            background:
+                radial-gradient(circle at 50% 0%, rgba(0, 126, 255, 0.16), transparent 34%),
+                linear-gradient(145deg, #041f4d, #010914 78%);
+            border-top: 1px solid rgba(244, 185, 66, 0.2);
+            border-bottom: 1px solid rgba(244, 185, 66, 0.2);
+        }
+
+        #process .process-grid {
+            position: relative;
+            gap: 18px;
+        }
+
+        #process .process-grid::before {
+            content: "";
+            position: absolute;
+            top: 40px;
+            left: 12%;
+            right: 12%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(244, 185, 66, 0.65), transparent);
+        }
+
+        #process .process-card {
+            position: relative;
+            z-index: 1;
+            min-height: 220px;
+            padding: 30px 22px 26px;
+            border: 1px solid rgba(244, 185, 66, 0.24);
+            border-radius: 18px;
+            background: linear-gradient(150deg, rgba(10, 52, 117, 0.86), rgba(2, 12, 34, 0.96));
+            box-shadow: 0 18px 38px rgba(0, 3, 15, 0.3);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #process .process-card:hover {
+            transform: translateY(-8px);
+            border-color: #f4b942;
+            box-shadow: 0 26px 52px rgba(0, 4, 18, 0.48), 0 0 24px rgba(0, 126, 255, 0.12);
+        }
+
+        #process .process-circle {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 22px;
+            border: 2px solid #f4b942;
+            background: linear-gradient(145deg, #0b3b82, #062b66);
+            color: #f4b942;
+            box-shadow: 0 0 0 6px rgba(244, 185, 66, 0.08), 0 12px 25px rgba(0, 0, 0, 0.28);
+        }
+
+        #process .process-card h3 {
+            color: #ffffff;
+            font-size: 18px;
+        }
+
+        #process .process-card p {
+            color: #b9cbe1;
+            line-height: 1.65;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            background: rgba(3, 12, 27, 0.78);
+            border-color: rgba(154, 183, 218, 0.25);
+        }
+
+        .section-heading p,
+        .hero p {
+            color: #c8d5e6;
+        }
+
+        footer {
+            background: #020711;
+            border-top: 1px solid rgba(214, 168, 79, 0.22);
+        }
+
+        .client-link {
+            white-space: nowrap;
+        }
+
+        .btn-secondary {
+            color: #f4f7fb;
+            background: rgba(11, 42, 91, 0.62);
+            border-color: #d6a84f;
+        }
+
+        .btn-secondary:hover {
+            color: #07162e;
+            background: #d6a84f;
+            border-color: #d6a84f;
+        }
+
+        .hero-buttons .btn {
+            color: #f4f7fb;
+            background: #0b2a5b;
+            border: 2px solid #d6a84f;
+            box-shadow: inset 0 0 0 1px #0b2a5b, 0 10px 25px rgba(2, 12, 30, 0.35);
+        }
+
+        .hero-buttons .btn:hover {
+            color: #07162e;
+            background: #d6a84f;
+            border-color: #0b2a5b;
+            box-shadow: inset 0 0 0 1px #d6a84f, 0 14px 30px rgba(214, 168, 79, 0.25);
+        }
+
+        .nav-button.whatsapp,
+        .btn-whatsapp,
+        .whatsapp-float {
+            color: #f4f7fb !important;
+            background: #0b2a5b;
+            border: 2px solid #d6a84f;
+            box-shadow: inset 0 0 0 1px #0b2a5b, 0 10px 25px rgba(2, 12, 30, 0.35);
+        }
+
+        nav .client-link {
+            color: #f4f7fb !important;
+            background: #0b2a5b;
+            border: 2px solid #d6a84f;
+            box-shadow: inset 0 0 0 1px #0b2a5b, 0 10px 25px rgba(2, 12, 30, 0.35);
+        }
+
+        .nav-button.whatsapp:hover,
+        .btn-whatsapp:hover,
+        .whatsapp-float:hover {
+            color: #07162e !important;
+            background: #d6a84f;
+            border-color: #0b2a5b;
+            box-shadow: inset 0 0 0 1px #d6a84f, 0 14px 30px rgba(214, 168, 79, 0.25);
+        }
+
+        nav .client-link:hover {
+            color: #07162e !important;
+            background: #d6a84f;
+            border-color: #0b2a5b;
+        }
+
+        /* Name 2 logo palette: midnight navy, electric blue, and gold */
+        body {
+            background-color: #020817;
+            background-image:
+                radial-gradient(circle at 50% 0%, rgba(7, 83, 185, 0.28), transparent 32%),
+                radial-gradient(circle at 88% 42%, rgba(244, 185, 66, 0.1), transparent 24%),
+                linear-gradient(rgba(76, 146, 230, 0.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(76, 146, 230, 0.025) 1px, transparent 1px);
+        }
+
+        header {
+            background: rgba(2, 8, 23, 0.96);
+            border-bottom-color: rgba(244, 185, 66, 0.38);
+        }
+
+        .hero {
+            background:
+                radial-gradient(circle at 74% 18%, rgba(244, 185, 66, 0.18), transparent 23%),
+                radial-gradient(circle at 18% 68%, rgba(0, 119, 255, 0.24), transparent 34%),
+                linear-gradient(135deg, #062b66 0%, #031636 46%, #010611 100%);
+        }
+
+        .hero-card,
+        .why-card,
+        .service-card,
+        .category,
+        .testimonial-card,
+        .contact-form,
+        .stat-card {
+            background: linear-gradient(145deg, rgba(6, 43, 102, 0.92), rgba(2, 13, 35, 0.97));
+        }
+
+        .trust-bar,
+        .process {
+            background: linear-gradient(115deg, #041f4d, #010914);
+        }
+
+        .category-content {
+            background: #062b66;
+        }
+
+        .satisfaction-section {
+            background:
+                radial-gradient(circle at 75% 15%, rgba(244, 185, 66, 0.1), transparent 25%),
+                linear-gradient(145deg, #062b66, #010914 75%);
+        }
+
+        .brand span,
+        .footer-brand span,
+        nav a:hover,
+        .hero h1 span,
+        .hero-proof span::before,
+        .section-heading .eyebrow,
+        .service-number,
+        .check-list li::before,
+        .stars,
+        .footer-column a:hover,
+        .contact-detail a {
+            color: #f4b942;
+        }
+
+        .nav-button,
+        .btn-primary,
+        .step-icon,
+        .icon,
+        .process-circle,
+        .testimonial-avatar,
+        .hero-buttons .btn,
+        .nav-button.whatsapp,
+        .btn-whatsapp,
+        .whatsapp-float,
+        nav .client-link {
+            background: #062b66;
+            border-color: #f4b942;
+        }
+
+        .brand,
+        .footer-brand {
+            color: #0b2a5b;
+            background: linear-gradient(180deg, #2f86dc 0%, #14519e 32%, #0b2a5b 66%, #020c22 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 1px 0 rgba(95, 168, 255, 0.35), 0 0 20px rgba(0, 126, 255, 0.55);
+            filter: drop-shadow(0 5px 6px rgba(0, 8, 32, 0.6));
+        }
+
+        .brand {
+            position: relative;
+            -webkit-box-reflect: below -9px linear-gradient(transparent 34%, rgba(0, 126, 255, 0.2));
+        }
+
+        .brand .gold-letter,
+        .footer-brand .gold-letter {
+            color: #f4b942;
+            background: linear-gradient(180deg, #fff0a6 0%, #f4b942 45%, #b76b08 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 16px rgba(244, 185, 66, 0.35);
+        }
+
+        /* Premium finish */
+        .navbar {
+            max-width: 1280px;
+            padding-top: 18px;
+            padding-bottom: 18px;
+        }
+
+        .logo-area {
+            gap: 16px;
+        }
+
+        .logo-svg {
+            filter: drop-shadow(0 0 12px rgba(17, 133, 255, 0.28));
+        }
+
+        .brand-tagline {
+            color: #90a8c7;
+        }
+
+        .hero h1 {
+            text-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+        }
+
+        .hero h1 span {
+            background: linear-gradient(100deg, #6bd1ff, #168cff 55%, #f4b942);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-card,
+        .why-card,
+        .service-card,
+        .category,
+        .testimonial-card,
+        .contact-form,
+        .stat-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-card::before,
+        .why-card::before,
+        .service-card::before,
+        .category::before,
+        .testimonial-card::before,
+        .contact-form::before,
+        .stat-card::before {
+            content: "";
+            position: absolute;
+            inset: 0 0 auto;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(244, 185, 66, 0.8), transparent);
+            opacity: 0.75;
+        }
+
+        .hero-card:hover,
+        .why-card:hover,
+        .service-card:hover,
+        .category:hover,
+        .testimonial-card:hover,
+        .stat-card:hover {
+            border-color: rgba(244, 185, 66, 0.62);
+            box-shadow: 0 24px 60px rgba(0, 7, 22, 0.48), 0 0 24px rgba(0, 126, 255, 0.1);
+        }
+
+        .btn {
+            letter-spacing: 0.25px;
+        }
+
+        .hero-buttons .btn,
+        .nav-button,
+        .support-card .btn,
+        .contact-form .btn {
+            box-shadow: 0 10px 24px rgba(0, 6, 20, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.16);
+        }
+
+        .contact-form .btn {
+            width: 100%;
+            min-height: 52px;
+            border: 2px solid #f4b942;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #0b3b82, #062b66);
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 800;
+            letter-spacing: 0.35px;
+        }
+
+        .hero-buttons .btn:hover,
+        .nav-button:hover,
+        .support-card .btn:hover,
+        .contact-form .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .contact-form .btn:hover {
+            background: #f4b942;
+            border-color: #ffffff;
+            color: #041326;
+            box-shadow: 0 14px 30px rgba(244, 185, 66, 0.22);
+        }
+
+        .section-heading .eyebrow {
+            text-shadow: 0 0 14px rgba(244, 185, 66, 0.24);
+        }
+
+        .process-circle,
+        .testimonial-avatar,
+        .step-icon,
+        .icon {
+            box-shadow: 0 8px 20px rgba(0, 107, 235, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+        }
+
+        .hero-container {
+            padding-top: 110px;
+            padding-bottom: 110px;
+        }
+
+        .hero h1 {
+            max-width: 760px;
+            font-size: clamp(46px, 5.6vw, 76px);
+            line-height: 0.99;
+            letter-spacing: -1.5px;
+        }
+
+        .hero p {
+            max-width: 590px;
+            color: #b9cbe2;
+        }
+
+        .section-heading h2,
+        .support-content h2,
+        .contact-info h2,
+        .cta h2 {
+            letter-spacing: -0.6px;
+        }
+
+        nav a:not(.nav-button) {
+            color: #aebfd5;
+            letter-spacing: 0.2px;
+        }
+
+        .hero-proof {
+            color: #a6bbd5;
+            letter-spacing: 0.2px;
+        }
+
+        .hero-card {
+            padding: 34px;
+            border-radius: 18px;
+        }
+
+        .hero-card-title {
+            color: #ffffff;
+            letter-spacing: 0.2px;
+        }
+
+        .sourcing-step {
+            padding-bottom: 18px;
+            border-bottom: 1px solid rgba(145, 182, 224, 0.12);
+        }
+
+        .sourcing-step:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
+
+        .section-heading {
+            margin-bottom: 58px;
+        }
+
+        .why-card,
+        .service-card,
+        .testimonial-card {
+            padding: 32px;
+        }
+
+        .contact-form {
+            border: 1px solid rgba(244, 185, 66, 0.85);
+            border-radius: 16px;
+            box-shadow:
+                0 20px 48px rgba(0, 4, 15, 0.42),
+                0 0 0 4px rgba(244, 185, 66, 0.07),
+                inset 0 1px 0 rgba(255, 255, 255, 0.12);
+        }
+
+        #contact {
+            background:
+                radial-gradient(circle at 86% 12%, rgba(0, 126, 255, 0.14), transparent 28%),
+                linear-gradient(145deg, #041f4d, #010914 76%);
+            border-top: 1px solid rgba(244, 185, 66, 0.18);
+            border-bottom: 1px solid rgba(244, 185, 66, 0.18);
+        }
+
+        #contact .contact-info h2 {
+            color: #ffffff;
+        }
+
+        #contact .contact-info > p {
+            color: #b9cbe1;
+            line-height: 1.75;
+        }
+
+        #satisfaction {
+            position: relative;
+            background:
+                radial-gradient(circle at 12% 12%, rgba(0, 126, 255, 0.16), transparent 28%),
+                radial-gradient(circle at 86% 82%, rgba(244, 185, 66, 0.1), transparent 25%),
+                linear-gradient(145deg, #041f4d, #010914 78%);
+            border-top: 1px solid rgba(244, 185, 66, 0.2);
+            border-bottom: 1px solid rgba(244, 185, 66, 0.2);
+        }
+
+        #satisfaction .stats-grid {
+            gap: 18px;
+            margin-bottom: 72px;
+        }
+
+        #satisfaction .stat-card {
+            position: relative;
+            min-height: 164px;
+            padding: 30px 22px;
+            border: 1px solid rgba(244, 185, 66, 0.3);
+            border-radius: 18px;
+            background: linear-gradient(150deg, rgba(10, 52, 117, 0.88), rgba(2, 12, 34, 0.96));
+            box-shadow: 0 18px 38px rgba(0, 3, 15, 0.3);
+        }
+
+        #satisfaction .stat-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 20%;
+            right: 20%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #f4b942, transparent);
+        }
+
+        #satisfaction .stat-card:hover {
+            transform: translateY(-8px);
+            border-color: #f4b942;
+            box-shadow: 0 26px 52px rgba(0, 4, 18, 0.48), 0 0 24px rgba(0, 126, 255, 0.12);
+        }
+
+        #satisfaction .stat-number {
+            margin-bottom: 15px;
+            color: #f4b942;
+            font-size: 38px;
+            letter-spacing: 1px;
+            text-shadow: 0 0 18px rgba(244, 185, 66, 0.2);
+        }
+
+        #satisfaction .stat-label {
+            color: #ffffff;
+            line-height: 1.45;
+        }
+
+        #satisfaction .testimonials-grid {
+            gap: 18px;
+        }
+
+        #satisfaction .testimonial-card {
+            min-height: 190px;
+            padding: 26px;
+            border: 1px solid rgba(244, 185, 66, 0.25);
+            border-radius: 18px;
+            background: linear-gradient(150deg, rgba(6, 43, 102, 0.86), rgba(2, 13, 35, 0.97));
+            box-shadow: 0 16px 34px rgba(0, 3, 15, 0.26);
+        }
+
+        #satisfaction .testimonial-card:hover {
+            transform: translateY(-7px);
+            border-color: #f4b942;
+            box-shadow: 0 24px 48px rgba(0, 4, 18, 0.44);
+        }
+
+        #satisfaction .testimonial-avatar {
+            border: 2px solid #f4b942;
+            background: #062b66;
+            color: #f4b942;
+            box-shadow: 0 0 0 5px rgba(244, 185, 66, 0.08);
+        }
+
+        #satisfaction .testimonial-info p,
+        #satisfaction .testimonial-text {
+            color: #b9cbe1;
+        }
+
+        .location-map {
+            border-color: rgba(244, 185, 66, 0.35);
+            box-shadow: 0 18px 40px rgba(0, 4, 15, 0.32);
+        }
+
+        .copyright {
+            color: #7188a7;
+        }
+
+        @media (max-width: 600px) {
+            .hero-container {
+                padding-top: 78px;
+                padding-bottom: 78px;
+            }
+
+            .hero h1 {
+                letter-spacing: -0.5px;
+            }
+
+            .hero-card,
+            .why-card,
+            .service-card,
+            .testimonial-card {
+                padding: 25px;
+            }
+        }
+
+        .menu-btn {
+            color: #d6a84f;
+        }
+
+        @media (max-width: 900px) {
+            nav {
+                background: linear-gradient(160deg, #0b2a5b, #061326);
+                border-bottom: 2px solid #d6a84f;
+                box-shadow: 0 18px 35px rgba(0, 0, 0, 0.35);
+            }
+
+            nav .nav-button.whatsapp {
+                background: #0b2a5b;
+                border: 2px solid #d6a84f;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-buttons .btn,
+            .support-card .btn,
+            .contact-form .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .client-link {
+                min-height: 48px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            nav .client-link {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+
+        <a href="#home" class="logo-area">
+            <img class="logo-svg" src="images/only-logo.png" alt="Sourviax logo">
+            <div>
+                <div class="brand">Sourvi<span class="gold-letter">a</span>x</div>
+                <span class="brand-tagline">TRUSTED CHINA SOURCING</span>
+            </div>
+        </a>
+
+        <button class="menu-btn" id="menuBtn">☰</button>
+
+        <nav id="navigation">
+            <a href="#home" class="home-link">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#products">Products</a>
+            <a href="#process">How It Works</a>
+            <a href="#contact">Contact</a>
+            <a href="https://wa.me/8617280389874?text=Hello%20Sourviax%2C%20I%20want%20to%20source%20from%20China." class="nav-button whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="mailto:sourcing@sourviax.com?subject=Client%20Inquiry" class="nav-button client-link">Email Us</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-container">
+        <div>
+            <span class="badge">CHINA SOURCING • GLOBAL BUYERS</span>
+            <h1>Your Bridge to <span>Trusted China Sourcing.</span></h1>
+            <p>
+                Sourviax connects international buyers with reliable manufacturers and suppliers in China — from product sourcing and supplier verification to quality inspection and global delivery.
+            </p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/8617280389874?text=Hello%20Sourviax%2C%20I%20want%20to%20source%20from%20China." class="btn btn-whatsapp" target="_blank" rel="noopener">WhatsApp Us</a>
+                <a href="mailto:sourcing@sourviax.com?subject=Client%20Inquiry" class="btn btn-primary client-link">Email Us</a>
+                <a href="#services" class="btn btn-secondary">Explore Services</a>
+            </div>
+            <div class="hero-proof" aria-label="Sourviax trust benefits">
+                <span>Verified supplier support</span>
+                <span>Quality follow-up</span>
+                <span>Global buyer assistance</span>
+            </div>
+        </div>
+
+        <div class="hero-card">
+            <div class="hero-card-title">From China Factory to Your Door</div>
+
+            <div class="sourcing-step">
+                <div class="step-icon">01</div>
+                <div>
+                    <h4>Find the Right Supplier</h4>
+                    <p>We identify suitable factories and suppliers based on your product requirements.</p>
+                </div>
+            </div>
+
+            <div class="sourcing-step">
+                <div class="step-icon">02</div>
+                <div>
+                    <h4>Verify & Compare</h4>
+                    <p>Compare quotations, capabilities, MOQ, certifications and commercial terms.</p>
+                </div>
+            </div>
+
+            <div class="sourcing-step">
+                <div class="step-icon">03</div>
+                <div>
+                    <h4>Inspect & Control Quality</h4>
+                    <p>Product samples and quality inspections help reduce sourcing risks.</p>
+                </div>
+            </div>
+
+            <div class="sourcing-step">
+                <div class="step-icon">04</div>
+                <div>
+                    <h4>Ship Worldwide</h4>
+                    <p>Coordinate international logistics according to your preferred shipping terms.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="trust-bar">
+    <div class="trust-container">
+        <div class="trust-item">
+            <div class="trust-number">500+</div>
+            <div class="trust-label">Supplier Network*</div>
+        </div>
+        <div class="trust-item">
+            <div class="trust-number">30+</div>
+            <div class="trust-label">Countries Served*</div>
+        </div>
+        <div class="trust-item">
+            <div class="trust-number">1000+</div>
+            <div class="trust-label">Product Opportunities*</div>
+        </div>
+    </div>
+</div>
+
+<section id="about">
+    <div class="container">
+        <div class="section-heading">
+            <div class="eyebrow">WHY SOURVIAX</div>
+            <h2>China sourcing without the unnecessary complexity.</h2>
+            <p>
+                We help international buyers communicate with suppliers, evaluate opportunities and manage the sourcing process with greater confidence.
+            </p>
+        </div>
+
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="icon">🔎</div>
+                <h3>Reliable Supplier Search</h3>
+                <p>Find manufacturers and suppliers that match your product specifications, target price and quantity.</p>
+            </div>
+
+            <div class="why-card">
+                <div class="icon">✓</div>
+                <h3>Supplier Verification</h3>
+                <p>Evaluate supplier information, production capability, experience and relevant documentation before placing an order.</p>
+            </div>
+
+            <div class="why-card">
+                <div class="icon">💬</div>
+                <h3>Better Communication</h3>
+                <p>We help bridge language, communication and commercial gaps between international buyers and Chinese suppliers.</p>
+            </div>
+
+            <div class="why-card">
+                <div class="icon">💰</div>
+                <h3>Negotiation Support</h3>
+                <p>Support with pricing, MOQ, payment terms, packaging, lead time and other purchasing conditions.</p>
+            </div>
+
+            <div class="why-card">
+                <div class="icon">🛡</div>
+                <h3>Quality Control</h3>
+                <p>Coordinate samples, inspections and product checks before goods leave the supplier.</p>
+            </div>
+
+            <div class="why-card">
+                <div class="icon">🌎</div>
+                <h3>Global Logistics</h3>
+                <p>Coordinate shipping solutions including EXW, FOB, CIF, DAP and DDP according to the project.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="services" id="services">
+    <div class="container">
+        <div class="section-heading">
+            <div class="eyebrow">OUR SERVICES</div>
+            <h2>One sourcing partner. Multiple solutions.</h2>
+            <p>Sourviax can support your sourcing journey from the initial product idea through supplier selection, purchasing, inspection and shipment.</p>
+        </div>
+
+        <div class="service-grid">
+            <div class="service-card">
+                <div class="service-number">01</div>
+                <h3>Product Sourcing</h3>
+                <p>Tell us what you need and we help identify suitable manufacturers and suppliers in China.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-number">02</div>
+                <h3>Supplier Verification</h3>
+                <p>Review supplier capability, business information, product range and purchasing suitability.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-number">03</div>
+                <h3>Price Negotiation</h3>
+                <p>Get assistance negotiating product prices, MOQ, payment terms, packaging and lead times.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-number">04</div>
+                <h3>Samples & Prototypes</h3>
+                <p>Arrange samples and prototypes so you can evaluate products before larger production orders.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-number">05</div>
+                <h3>Quality Inspection</h3>
+                <p>Coordinate inspection and quality-control procedures before shipment.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-number">06</div>
+                <h3>International Logistics</h3>
+                <p>Support international shipping and delivery planning based on your destination and preferred Incoterm.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="products">
+    <div class="container">
+        <div class="section-heading">
+            <div class="eyebrow">PRODUCT CATEGORIES</div>
+            <h2>Source almost anything from China.</h2>
+            <p>Explore the manufacturing environments and product capabilities we can help you source from China.</p>
+        </div>
+
+        <div class="category-grid">
+            <div class="category">
+                <img class="category-image" src="images/electronics.jpg" alt="Electronics assembly line">
+                <div class="category-content">
+                    <h3>Electronics</h3>
+                    <p>Assembly, components and electronic accessories.</p>
+                </div>
+            </div>
+
+            <div class="category">
+                <img class="category-image" src="images/home-appliances.jpg" alt="Home appliance manufacturing floor">
+                <div class="category-content">
+                    <h3>Home Appliances</h3>
+                    <p>Household equipment and smart home products.</p>
+                </div>
+            </div>
+
+            <div class="category">
+                <img class="category-image" src="images/furniture.jpg" alt="Furniture production facility">
+                <div class="category-content">
+                    <h3>Furniture</h3>
+                    <p>Home, office and commercial production.</p>
+                </div>
+            </div>
+
+            <div class="category">
+                <img class="category-image" src="images/machinery.jpg" alt="Industrial machinery factory">
+                <div class="category-content">
+                    <h3>Machinery</h3>
+                    <p>Industrial equipment, tools and machinery.</p>
+                </div>
+            </div>
+
+            <div class="category">
+                <img class="category-image" src="images/packaging.jpg" alt="Packaging production line">
+                <div class="category-content">
+                    <h3>Packaging</h3>
+                    <p>Custom boxes, packaging and materials.</p>
+                </div>
+            </div>
+
+            <div class="category">
+                <img class="category-image" src="images/oem-odm.jpg" alt="OEM and ODM manufacturing facility">
+                <div class="category-content">
+                    <h3>OEM & ODM</h3>
+                    <p>Custom manufacturing and private-label solutions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="process" id="process">
+    <div class="container">
+        <div class="section-heading">
+            <div class="eyebrow">HOW IT WORKS</div>
+            <h2>A simple sourcing process.</h2>
+            <p>We make the process easier to understand, manage and communicate.</p>
+        </div>
+
+        <div class="process-grid">
+            <div class="process-card">
+                <div class="process-circle">01</div>
+                <h3>Tell Us What You Need</h3>
+                <p>Share your product, specifications, quantity, target market and requirements.</p>
+            </div>
+
+            <div class="process-card">
+                <div class="process-circle">02</div>
+                <h3>Find Suppliers</h3>
+                <p>We search for manufacturers and suppliers suitable for your requirements.</p>
+            </div>
+
+            <div class="process-card">
+                <div class="process-circle">03</div>
+                <h3>Compare & Negotiate</h3>
+                <p>Review quotations and negotiate commercial terms.</p>
+            </div>
+
+            <div class="process-card">
+                <div class="process-circle">04</div>
+                <h3>Inspect & Ship</h3>
+                <p>Arrange samples, quality checks and international shipping.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="support-section">
+    <div class="container">
+        <div class="support-grid">
+            <div class="support-content">
+                <div class="section-heading" style="text-align:left; margin:0 0 25px 0;">
+                    <div class="eyebrow">CUSTOMER SUPPORT</div>
+                    <h2>We're here throughout the sourcing journey.</h2>
+                </div>
+
+                <p>
+                    Sourcing from China is not only about finding a supplier. It is about communication, follow-up, problem solving and keeping your project moving.
+                </p>
+
+                <ul class="check-list">
+                    <li>Supplier communication and follow-up</li>
+                    <li>Quotation and product comparison</li>
+                    <li>Order and production coordination</li>
+                    <li>Quality and shipment follow-up</li>
+                    <li>International buyer support</li>
+                </ul>
+            </div>
+
+            <div class="support-card">
+                <h3>Send your requirements with confidence.</h3>
+                <p>Tell us the product, quantity, specifications, target price, and delivery country. Our team will review your request and guide you to the next sourcing step.</p>
+                <button class="btn btn-primary" onclick="openQuote(event)">Send Your Requirements</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2>Ready to source from China?</h2>
+        <p>Tell Sourviax what you're looking for and start your sourcing journey.</p>
+        <div class="hero-buttons" style="justify-content:center;">
+            <a href="https://wa.me/8617280389874?text=Hello%20Sourviax%2C%20I%20want%20to%20source%20from%20China." class="btn btn-whatsapp" target="_blank" rel="noopener">WhatsApp Us</a>
+            <a href="mailto:sourcing@sourviax.com?subject=Client%20Inquiry" class="btn btn-primary client-link">Email Us</a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="eyebrow">CONTACT SOURVIAX</div>
+                <h2>Let's discuss your sourcing project.</h2>
+                <p>Whether you need a single product, a new supplier, OEM manufacturing or a complete sourcing solution, send us your requirements.</p>
+
+                <div class="contact-detail">
+                    <strong>Email</strong>
+                    <span><a href="mailto:sourcing@sourviax.com?subject=Client%20Inquiry">sourcing@sourviax.com</a></span>
+                </div>
+
+                <div class="contact-detail">
+                    <strong>Location</strong>
+                    <span>China • Serving International Buyers</span>
+                </div>
+
+                <div class="contact-detail">
+                    <strong>Address</strong>
+                    <span>Fangsong Road No. 518, East-Cixi Industrial Zone, Cixi, Zhejiang, China</span>
+                </div>
+
+                <div class="contact-detail">
+                    <strong>WhatsApp</strong>
+                    <span><a href="https://wa.me/8617280389874?text=Hello%20Sourviax%2C%20I%20want%20to%20source%20from%20China." target="_blank" rel="noopener">+86 172 8038 9874</a></span>
+                </div>
+
+                <div class="contact-detail">
+                    <strong>Call Us</strong>
+                    <span><a href="tel:+8617280389874">+86 172 8038 9874</a></span>
+                </div>
+
+                <div class="qr-card">
+                    <div class="qr-code-wrap">
+                        <img src="images/sourviax-qr.png" alt="Scan to connect with Sourviax">
+                        <img class="qr-brand-mark" src="images/only-logo.png" alt="">
+                    </div>
+                    <span>Scan to connect</span>
+                </div>
+
+                <div class="location-map" aria-label="Map showing Cixi, Zhejiang, China">
+                    <iframe
+                        src="https://www.google.com/maps?q=Cixi%2C%20Zhejiang%2C%20China&output=embed"
+                        title="Cixi, Zhejiang, China map"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+                <div class="contact-detail">
+                    <strong>Business Hours</strong>
+                    <span>Monday – Friday</span>
+                </div>
+            </div>
+
+            <form class="contact-form" action="https://formsubmit.co/sourcing@sourviax.com" method="POST">
+                <input type="hidden" name="_subject" value="New Sourviax Contact Inquiry">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" name="Full Name" placeholder="Your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="Email" placeholder="you@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Country</label>
+                    <input type="text" name="Country" placeholder="Your country">
+                </div>
+
+                <div class="form-group">
+                    <label>What do you need?</label>
+                    <textarea name="Requirements" placeholder="Tell us about the product, quantity, target price, specifications, etc." required></textarea>
+                </div>
+
+                <button class="btn btn-primary" type="submit">Send Inquiry</button>
+                <p class="form-note">Your requirements are handled confidentially. We respond during business hours.</p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="satisfaction-section" id="satisfaction">
+    <div class="container">
+        <div class="section-heading">
+            <div class="eyebrow">BUYER SUPPORT</div>
+            <h2>Clear support from first request to final delivery.</h2>
+            <p>We focus on practical communication, supplier evaluation and follow-up throughout your sourcing project.</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">01</div>
+                <div class="stat-label">Share your requirements</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">02</div>
+                <div class="stat-label">Compare supplier options</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">03</div>
+                <div class="stat-label">Review samples and quality</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">04</div>
+                <div class="stat-label">Plan delivery worldwide</div>
+            </div>
+        </div>
+
+        <div class="section-heading">
+            <div class="eyebrow">WHAT WE HELP WITH</div>
+            <h2>Practical support for international buyers.</h2>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">01</div>
+                    <div class="testimonial-info">
+                        <h4>Supplier matching</h4>
+                        <p>Start with the right product fit</p>
+                    </div>
+                </div>
+                <p class="testimonial-text">
+                    We search for manufacturers and suppliers that match your product, quantity and target market.
+                </p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">02</div>
+                    <div class="testimonial-info">
+                        <h4>Supplier verification</h4>
+                        <p>Review capability and documentation</p>
+                    </div>
+                </div>
+                <p class="testimonial-text">
+                    We help evaluate supplier information, production capability, experience and relevant documents.
+                </p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">03</div>
+                    <div class="testimonial-info">
+                        <h4>Quotation comparison</h4>
+                        <p>Understand the commercial details</p>
+                    </div>
+                </div>
+                <p class="testimonial-text">
+                    Compare prices, MOQ, payment terms, packaging and lead times before making a decision.
+                </p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">04</div>
+                    <div class="testimonial-info">
+                        <h4>Communication support</h4>
+                        <p>Keep supplier conversations clear</p>
+                    </div>
+                </div>
+                <p class="testimonial-text">
+                    Bridge language and commercial gaps with clear follow-up between buyers and Chinese suppliers.
+                </p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">05</div>
+                    <div class="testimonial-info">
+                        <h4>Quality follow-up</h4>
+                        <p>Check products before shipment</p>
+                    </div>
+                </div>
+                <p class="testimonial-text">
+                    Coordinate samples, inspections and quality checks before goods leave the supplier.
+                </p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">06</div>
+                    <div class="testimonial-info">
+                        <h4>Shipping coordination</h4>
+                        <p>Plan the route to your market</p>
+                    </div>
+                </div>
+                <p class="testimonial-text">
+                    Review shipping options and coordinate delivery according to your destination and preferred Incoterm.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<a href="https://wa.me/8617280389874?text=Hello%20Sourviax%2C%20I%20want%20to%20source%20from%20China." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">✆</a>
+
+<footer>
+    <div class="footer-grid">
+        <div>
+            <div class="footer-brand">Sourvi<span class="gold-letter">a</span>x</div>
+            <p class="footer-description">
+                Your Bridge to Trusted China Sourcing. Connecting international buyers with sourcing, manufacturing and logistics solutions in China.
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h4>Company</h4>
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#process">How It Works</a>
+        </div>
+
+        <div class="footer-column">
+            <h4>Services</h4>
+            <a href="#services">Product Sourcing</a>
+            <a href="#services">Supplier Verification</a>
+            <a href="#services">Quality Inspection</a>
+            <a href="#services">Logistics</a>
+        </div>
+
+        <div class="footer-column">
+            <h4>Contact</h4>
+            <a href="#contact">Contact Us</a>
+            <a href="#" onclick="openQuote(event)">Request Quote</a>
+        </div>
+    </div>
+
+    <div class="copyright">© 2026 Sourviax. All rights reserved.</div>
+</footer>
+
+<div class="modal" id="quoteModal">
+    <div class="modal-content">
+        <button class="close-modal" onclick="closeQuote()">×</button>
+        <h2>Request a Sourcing Quote</h2>
+        <p>Tell us what you want to source from China.</p>
+
+        <form action="https://formsubmit.co/sourcing@sourviax.com" method="POST">
+            <input type="hidden" name="_subject" value="New Sourviax Sourcing Quote Request">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" name="Full Name" placeholder="Your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="Email" placeholder="you@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label>Country</label>
+                <input type="text" name="Country" placeholder="Your country" required>
+            </div>
+
+            <div class="form-group">
+                <label>Product</label>
+                <input type="text" name="Product" placeholder="What product are you looking for?" required>
+            </div>
+
+            <div class="form-group">
+                <label>Estimated Quantity</label>
+                <input type="text" name="Estimated Quantity" placeholder="e.g. 1,000 pcs/month">
+            </div>
+
+            <div class="form-group">
+                <label>Product Requirements</label>
+                <textarea name="Product Requirements" placeholder="Specifications, materials, certifications, packaging, target price, etc."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Preferred Shipping Term</label>
+                <select name="Preferred Shipping Term">
+                    <option>Not Sure</option>
+                    <option>EXW</option>
+                    <option>FOB</option>
+                    <option>CIF</option>
+                    <option>DAP</option>
+                    <option>DDP</option>
+                </select>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Submit Sourcing Request</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    const menuBtn = document.getElementById("menuBtn");
+    const navigation = document.getElementById("navigation");
+
+    menuBtn.addEventListener("click", function () {
+        navigation.classList.toggle("active");
+    });
+
+    const quoteModal = document.getElementById("quoteModal");
+
+    function openQuote(event) {
+        if (event) {
+            event.preventDefault();
+        }
+        quoteModal.classList.add("active");
+    }
+
+    function closeQuote() {
+        quoteModal.classList.remove("active");
+    }
+
+    quoteModal.addEventListener("click", function(event) {
+        if (event.target === quoteModal) {
+            closeQuote();
+        }
+    });
+
+    function submitQuote(event) {
+        event.preventDefault();
+        alert("Thank you! Your sourcing request has been received. Sourviax will contact you shortly.");
+        event.target.reset();
+        closeQuote();
+    }
+
+    function submitContact(event) {
+        event.preventDefault();
+        alert("Thank you for contacting Sourviax. We will get back to you shortly.");
+        event.target.reset();
+    }
+
+    document.querySelectorAll("nav a").forEach(function(link) {
+        link.addEventListener("click", function() {
+            navigation.classList.remove("active");
+        });
+    });
+
+    /* ===== SCROLL ANIMATIONS ===== */
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -80px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry, index) {
+            if (entry.isIntersecting) {
+                setTimeout(function() {
+                    entry.target.classList.add('animate-fade-in-up');
+                    entry.target.style.opacity = '1';
+                }, index * 50);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe all interactive elements for scroll animations
+    document.querySelectorAll('.why-card, .service-card, .category, .process-card, .support-card, .hero-card, .contact-form').forEach(function(el) {
+        el.style.opacity = '0';
+        observer.observe(el);
+    });
+
+    // Animate sections as they come into view
+    document.querySelectorAll('section').forEach(function(section) {
+        section.style.opacity = '0';
+        observer.observe(section);
+    });
+</script>
+
+</body>
+</html>
