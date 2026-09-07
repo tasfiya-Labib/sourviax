@@ -2304,7 +2304,7 @@
             </div>
         </a>
 
-        <button class="menu-btn" id="menuBtn">☰</button>
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button>
 
         <nav id="navigation">
             <a href="#home" class="home-link">Home</a>
@@ -2863,17 +2863,17 @@
         <div class="footer-column">
             <h4>Contact</h4>
             <a href="#contact">Contact Us</a>
-            <a href="#" onclick="openQuote(event)">Request Quote</a>
+            <a href="#quoteModal" onclick="openQuote(event)">Request Quote</a>
         </div>
     </div>
 
     <div class="copyright">© 2026 Sourviax. All rights reserved.</div>
 </footer>
 
-<div class="modal" id="quoteModal">
+<div class="modal" id="quoteModal" role="dialog" aria-modal="true" aria-labelledby="quoteModalTitle">
     <div class="modal-content">
-        <button class="close-modal" onclick="closeQuote()">×</button>
-        <h2>Request a Sourcing Quote</h2>
+        <button class="close-modal" type="button" aria-label="Close quote form" onclick="closeQuote()">×</button>
+        <h2 id="quoteModalTitle">Request a Sourcing Quote</h2>
         <p>Tell us what you want to source from China.</p>
 
         <form action="https://formsubmit.co/sourcing@sourviax.com" method="POST">
@@ -2932,7 +2932,9 @@
     const navigation = document.getElementById("navigation");
 
     menuBtn.addEventListener("click", function () {
-        navigation.classList.toggle("active");
+        const isOpen = navigation.classList.toggle("active");
+        menuBtn.setAttribute("aria-expanded", String(isOpen));
+        menuBtn.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
     });
 
     const quoteModal = document.getElementById("quoteModal");
@@ -2970,6 +2972,8 @@
     document.querySelectorAll("nav a").forEach(function(link) {
         link.addEventListener("click", function() {
             navigation.classList.remove("active");
+            menuBtn.setAttribute("aria-expanded", "false");
+            menuBtn.setAttribute("aria-label", "Open navigation menu");
         });
     });
 
@@ -2998,7 +3002,7 @@
     });
 
     // Animate sections as they come into view
-    document.querySelectorAll('section').forEach(function(section) {
+    document.querySelectorAll('section:not(.hero)').forEach(function(section) {
         section.style.opacity = '0';
         observer.observe(section);
     });
